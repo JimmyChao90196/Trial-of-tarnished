@@ -10,12 +10,16 @@ import Foundation
 
 class FinalViewController: UIViewController {
 
+    var resultText = ""
+    @IBOutlet var resultLable: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        resultLable.text = resultText
 
     }
-    
-
 
 }
 

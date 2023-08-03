@@ -13,8 +13,8 @@ class IntroViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let test = Demigod(demigod: .mohgLordOfBlood)
-        test.printInformation()
+        //let test = Demigod(demigod: .mohgLordOfBlood)
+        //test.printInformation()
     }
     
 

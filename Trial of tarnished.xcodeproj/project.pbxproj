@@ -16,6 +16,8 @@
 		745D8D492A7B3FA2008C9527 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D8D482A7B3FA2008C9527 /* QuestionViewController.swift */; };
 		745D8D4B2A7B3FB9008C9527 /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D8D4A2A7B3FB9008C9527 /* FinalViewController.swift */; };
 		745D8D522A7B4021008C9527 /* DemigodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D8D512A7B4021008C9527 /* DemigodModel.swift */; };
+		745D8D542A7B5CAC008C9527 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D8D532A7B5CAC008C9527 /* QuestionModel.swift */; };
+		74A17E6D2A7B9D65007F0C28 /* ScoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A17E6C2A7B9D65007F0C28 /* ScoreModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		745D8D482A7B3FA2008C9527 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		745D8D4A2A7B3FB9008C9527 /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
 		745D8D512A7B4021008C9527 /* DemigodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemigodModel.swift; sourceTree = "<group>"; };
+		745D8D532A7B5CAC008C9527 /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
+		74A17E6C2A7B9D65007F0C28 /* ScoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				745D8D512A7B4021008C9527 /* DemigodModel.swift */,
+				745D8D532A7B5CAC008C9527 /* QuestionModel.swift */,
+				74A17E6C2A7B9D65007F0C28 /* ScoreModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -171,6 +177,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74A17E6D2A7B9D65007F0C28 /* ScoreModel.swift in Sources */,
+				745D8D542A7B5CAC008C9527 /* QuestionModel.swift in Sources */,
 				745D8D4B2A7B3FB9008C9527 /* FinalViewController.swift in Sources */,
 				745D8D472A7B3F85008C9527 /* IntroViewController.swift in Sources */,
 				745D8D332A7B3EE6008C9527 /* AppDelegate.swift in Sources */,

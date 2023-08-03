@@ -23,8 +23,6 @@ struct Demigod {
     }
     
     enum Nickname: String, CaseIterable, Hashable{
-        
-        
         case godrickTheGrafted = "Godrick the Grafted"
         case rennalaQueenOfTheFullMoon = "Rennala Queen of the Full Moon"
         case starscourgeRadahn = "Starscourge Radahn"
@@ -70,9 +68,13 @@ struct Demigod {
         
     }
     
-    func printInformation() {
+
+    /*func printInformation() {
         print("\(nickname.rawValue): Found at \(location), Intro: \(introduction)")
-    }
+    }*/
+ 
+    
+    
 }
 
 
