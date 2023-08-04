@@ -10,17 +10,41 @@ import Foundation
 
 class FinalViewController: UIViewController {
 
-    var resultText = ""
-    @IBOutlet var resultLable: UILabel!
+    
+    var resultDemigod = DemigodInfo.Nickname.godrickTheGrafted
+
+ 
+    @IBOutlet var webButton: UIButton!
+    @IBOutlet var resultBackgroundImage: UIImageView!
+    @IBOutlet var resultDescription: UITextView!
+    @IBOutlet var resultRuneImage: UIImageView!
+    @IBOutlet var resultTitle: UILabel!
+    
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        resultLable.text = resultText
-
+        updateResult()
     }
-
+    
+    
+    func updateResult(){
+        let resultDemigodInfo = DemigodInfo(resultDemigod)
+        resultTitle.text = resultDemigodInfo.titles
+        resultDescription.text = resultDemigodInfo.description
+        resultRuneImage.image = UIImage(named: resultDemigodInfo.runePictures)
+        resultRuneImage.backgroundColor = .black
+        resultBackgroundImage.image = UIImage(named: resultDemigodInfo.bossImage)
+        
+        
+    }
+    
+    
+    
 }
 
 

@@ -22,7 +22,8 @@ struct ScoreTracker{
     }
     
 
-    var score:[Demigod.Nickname:Int] = [
+    //Initialize score of each demi god with dictionary
+    var score:[DemigodInfo.Nickname:Int] = [
         .godrickTheGrafted: 0,
         .rennalaQueenOfTheFullMoon:0,
         .starscourgeRadahn:0,
@@ -32,24 +33,24 @@ struct ScoreTracker{
         .mohgLordOfBlood:0
     ]
     
-    var result = ""
+    var resultText = ""
+    var resultDemigod:DemigodInfo.Nickname = .godrickTheGrafted
     
     
-    
-    
-    
-    
+
+    //The funciton that calculate the highest score
     mutating func getHighestScore(){
-        
         if let (demigod, _) = score.max(by: {$0.value < $1.value}){
-            result = "You possess the great rune of \(demigod.rawValue)"
+            //resultText = "You possess the great rune of \(demigod.rawValue)"
+            resultDemigod = demigod
         }else{
-            result = "You possess the great rune of \(Demigod.Nickname.mohgLordOfBlood.rawValue)"
+            //resultText = "You possess the great rune of \(Demigod.Nickname.mohgLordOfBlood.rawValue)"
+            resultDemigod = DemigodInfo.Nickname.godrickTheGrafted
         }
-        
     }
+
     
-    
+    //Tracking score each time we press the next button
     mutating func trackingScore(_ tags:String){
         let selectedTags = buttontags(rawValue: tags)
         
@@ -64,18 +65,21 @@ struct ScoreTracker{
         default: score[.godrickTheGrafted]! += 0
         }
         
+        print("""
+        godrickTheGrafted \(score[.godrickTheGrafted] ?? 0)
+        rennalaQueenOfTheFullMoon \(score[.rennalaQueenOfTheFullMoon] ?? 0)
+        starscourgeRadahn \(score[.starscourgeRadahn] ?? 0)
+        morgottTheOmenKing \(score[.morgottTheOmenKing] ?? 0)
+        rykardLordOfBlasphemy \(score[.rykardLordOfBlasphemy] ?? 0)
+        maleniaBladeOfMiquella \(score[.maleniaBladeOfMiquella] ?? 0)
+        mohgLordOfBlood \(score[.mohgLordOfBlood] ?? 0)
+        
+    """)
+
     }
-    
-    
- 
-    
-    
-    
-    
-    
-    
-    
 }
+
+
 
 
 

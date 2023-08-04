@@ -44,45 +44,45 @@ enum Quiz: String, CaseIterable {
     var options: [String] {
         switch self {
         case .HomeLandscape:
-            return ["A grand castle, teeming with knowledge and wealth. (Godrick the Grafted)",
-                    "A tranquil forest, bathed in the glow of the full moon. (Rennala Queen of the Full Moon)",
-                    "A desolate wasteland, scarred by falling stars. (Starscourge Radahn)",
-                    "An imposing fortress, steeped in dark omens. (Morgott, the Omen King)"]
+            return ["A grand castle, teeming with knowledge and wealth.",
+                    "A tranquil forest, bathed in the glow of the full moon.",
+                    "A desolate wasteland, scarred by falling stars.",
+                    "An imposing fortress, steeped in dark omens."]
         case .CombatMethod:
-            return ["Cunning trickery and powerful spells. (Rykard, Lord of Blasphemy)",
-                    "Strength and brute force, unleashing the fury of a thousand suns. (Starscourge Radahn)",
-                    "Swift, precise swordsmanship. (Malenia, Blade of Miquella)",
-                    "Commanding legions of loyal followers. (Morgott, the Omen King)"]
+            return ["Cunning trickery and powerful spells.",
+                    "Strength and brute force, unleashing the fury of a thousand suns.",
+                    "Swift, precise swordsmanship.",
+                    "Commanding legions of loyal followers."]
         case .LeadershipStyle:
-            return ["Wise and innovative, always seeking progress. (Godrick the Grafted)",
-                    "Mysterious and enigmatic, ruling from the shadows. (Rennala Queen of the Full Moon)",
-                    "Aggressive and dominant, seizing power through force. (Mohg, Lord of Blood)",
-                    "Inspirational and revered, leading with charisma. (Rykard, Lord of Blasphemy)"]
+            return ["Wise and innovative, always seeking progress.",
+                    "Mysterious and enigmatic, ruling from the shadows.",
+                    "Aggressive and dominant, seizing power through force.",
+                    "Inspirational and revered, leading with charisma."]
         case .ChallengeApproach:
-            return ["With careful planning and strategy. (Godrick the Grafted)",
-                    "By overpowering it with brute strength. (Mohg, Lord of Blood)",
-                    "By adapting and finding creative solutions. (Malenia, Blade of Miquella)",
-                    "By confronting it head on, fearlessly. (Starscourge Radahn)"]
+            return ["With careful planning and strategy.",
+                    "By overpowering it with brute strength.",
+                    "By adapting and finding creative solutions.",
+                    "By confronting it head on, fearlessly."]
         case .GreatestStrength:
-            return ["My unyielding thirst for knowledge. (Godrick the Grafted)",
-                    "My mastery over the forces of nature. (Rennala Queen of the Full Moon)",
-                    "My unparalleled combat skills. (Malenia, Blade of Miquella)",
-                    "My unstoppable willpower and determination. (Rykard, Lord of Blasphemy)"]
+            return ["My unyielding thirst for knowledge.",
+                    "My mastery over the forces of nature.",
+                    "My unparalleled combat skills.",
+                    "My unstoppable willpower and determination."]
         case .RulerType:
-            return ["A feared despot, ruling with an iron fist. (Morgott, the Omen King)",
-                    "A beloved sovereign, respected by all. (Rennala Queen of the Full Moon)",
-                    "A warlord, leading through strength and victory. (Mohg, Lord of Blood)",
-                    "An innovator, pushing the boundaries of what is possible. (Godrick the Grafted)"]
+            return ["A feared despot, ruling with an iron fist.",
+                    "A beloved sovereign, respected by all.",
+                    "A warlord, leading through strength and victory.",
+                    "An innovator, pushing the boundaries of what is possible."]
         case .GreatestWeakness:
-            return ["My ruthless ambition. (Morgott, the Omen King)",
-                    "My volatile temper. (Mohg, Lord of Blood)",
-                    "My relentless pursuit of knowledge, at any cost. (Rykard, Lord of Blasphemy)",
-                    "My inability to resist the allure of power. (Starscourge Radahn)"]
+            return ["My ruthless ambition.",
+                    "My volatile temper.",
+                    "My relentless pursuit of knowledge, at any cost.",
+                    "My inability to resist the allure of power."]
         case .CherishedValue:
-            return ["Loyalty, the cornerstone of every great kingdom. (Morgott, the Omen King)",
-                    "Courage, the heart of every warrior. (Starscourge Radahn)",
-                    "Wisdom, the foundation of every decision. (Godrick the Grafted)",
-                    "Harmony, the essence of a balanced life. (Rennala Queen of the Full Moon)"]
+            return ["Loyalty, the cornerstone of every great kingdom.",
+                    "Courage, the heart of every warrior.",
+                    "Wisdom, the foundation of every decision.",
+                    "Harmony, the essence of a balanced life."]
         }
     }
     
