@@ -10,7 +10,18 @@ import UIKit
 
 
 
-enum Quiz: String, CaseIterable {
+struct OptionInfo {
+    let optionContent: String
+    let optionTag: String
+}
+
+
+
+// Enum Quiz is used to represent different aspects of a character, such as their home landscape, combat method, leadership style, etc.
+// It conforms to String, allowing the cases to be easily transformed to and from a string representation.
+// It also conforms to CaseIterable, enabling the enumeration of all the cases.
+enum Quiz: String, CaseIterable, Hashable {
+    // These cases represent different character aspects that are part of the quiz.
     case HomeLandscape
     case CombatMethod
     case LeadershipStyle
@@ -20,6 +31,10 @@ enum Quiz: String, CaseIterable {
     case GreatestWeakness
     case CherishedValue
 
+    
+    
+    // Below, each case is mapped to a specific question that will be asked in the quiz.
+    // The questions relate to different facets of a character's personality and preferences.
     var description: String {
         switch self {
         case .HomeLandscape:
@@ -41,97 +56,69 @@ enum Quiz: String, CaseIterable {
         }
     }
 
-    var options: [String] {
+
+    var optionInfo: [OptionInfo] {
         switch self {
         case .HomeLandscape:
-            return ["A grand castle, teeming with knowledge and wealth.",
-                    "A tranquil forest, bathed in the glow of the full moon.",
-                    "A desolate wasteland, scarred by falling stars.",
-                    "An imposing fortress, steeped in dark omens."]
+            return [
+                OptionInfo(optionContent: "A grand castle, teeming with knowledge and wealth.", optionTag: "Godrick The Grafted"),
+                OptionInfo(optionContent: "A tranquil forest, bathed in the glow of the full moon.", optionTag: "Rennala Queen of the Full Moon"),
+                OptionInfo(optionContent: "A desolate wasteland, scarred by falling stars.", optionTag: "Starscourge Radahn"),
+                OptionInfo(optionContent: "An imposing fortress, steeped in dark omens.", optionTag: "Morgott, the Omen King")
+            ]
         case .CombatMethod:
-            return ["Cunning trickery and powerful spells.",
-                    "Strength and brute force, unleashing the fury of a thousand suns.",
-                    "Swift, precise swordsmanship.",
-                    "Commanding legions of loyal followers."]
+            return [
+                OptionInfo(optionContent: "Cunning trickery and powerful spells.", optionTag: "Rykard, Lord of Blasphemy"),
+                OptionInfo(optionContent: "Strength and brute force, unleashing the fury of a thousand suns.", optionTag: "Starscourge Radahn"),
+                OptionInfo(optionContent: "Swift, precise swordsmanship.", optionTag: "Malenia, Blade of Miquella"),
+                OptionInfo(optionContent: "Commanding legions of loyal followers.", optionTag: "Morgott, the Omen King")
+            ]
         case .LeadershipStyle:
-            return ["Wise and innovative, always seeking progress.",
-                    "Mysterious and enigmatic, ruling from the shadows.",
-                    "Aggressive and dominant, seizing power through force.",
-                    "Inspirational and revered, leading with charisma."]
+            return [
+                OptionInfo(optionContent: "Wise and innovative, always seeking progress.", optionTag: "Godrick The Grafted"),
+                OptionInfo(optionContent: "Mysterious and enigmatic, ruling from the shadows.", optionTag: "Rennala Queen of the Full Moon"),
+                OptionInfo(optionContent: "Aggressive and dominant, seizing power through force.", optionTag: "Mohg, Lord of Blood"),
+                OptionInfo(optionContent: "Inspirational and revered, leading with charisma.", optionTag: "Rykard, Lord of Blasphemy")
+            ]
         case .ChallengeApproach:
-            return ["With careful planning and strategy.",
-                    "By overpowering it with brute strength.",
-                    "By adapting and finding creative solutions.",
-                    "By confronting it head on, fearlessly."]
+            return [
+                OptionInfo(optionContent: "With careful planning and strategy.", optionTag: "Godrick the Grafted"),
+                OptionInfo(optionContent: "By overpowering it with brute strength.", optionTag: "Mohg, Lord of Blood"),
+                OptionInfo(optionContent: "By adapting and finding creative solutions.", optionTag: "Malenia, Blade of Miquella"),
+                OptionInfo(optionContent: "By confronting it head on, fearlessly.", optionTag: "Starscourge Radahn")
+            ]
         case .GreatestStrength:
-            return ["My unyielding thirst for knowledge.",
-                    "My mastery over the forces of nature.",
-                    "My unparalleled combat skills.",
-                    "My unstoppable willpower and determination."]
+            return [
+                OptionInfo(optionContent: "My unyielding thirst for knowledge.", optionTag: "Godrick the Grafted"),
+                OptionInfo(optionContent: "My mastery over the forces of nature.", optionTag: "Rennala Queen of the Full Moon"),
+                OptionInfo(optionContent: "My unparalleled combat skills.", optionTag: "Malenia, Blade of Miquella"),
+                OptionInfo(optionContent: "My unstoppable willpower and determination.", optionTag: "Rykard, Lord of Blasphemy")
+            ]
         case .RulerType:
-            return ["A feared despot, ruling with an iron fist.",
-                    "A beloved sovereign, respected by all.",
-                    "A warlord, leading through strength and victory.",
-                    "An innovator, pushing the boundaries of what is possible."]
+            return [
+                OptionInfo(optionContent: "A feared despot, ruling with an iron fist.", optionTag: "Morgott, the Omen King"),
+                OptionInfo(optionContent: "A beloved sovereign, respected by all.", optionTag: "Rennala Queen of the Full Moon"),
+                OptionInfo(optionContent: "A warlord, leading through strength and victory.", optionTag: "Mohg, Lord of Blood"),
+                OptionInfo(optionContent: "An innovator, pushing the boundaries of what is possible.", optionTag: "Godrick the Grafted")
+            ]
         case .GreatestWeakness:
-            return ["My ruthless ambition.",
-                    "My volatile temper.",
-                    "My relentless pursuit of knowledge, at any cost.",
-                    "My inability to resist the allure of power."]
+            return [
+                OptionInfo(optionContent: "My ruthless ambition.", optionTag: "Morgott, the Omen King"),
+                OptionInfo(optionContent: "My volatile temper.", optionTag: "Mohg, Lord of Blood"),
+                OptionInfo(optionContent: "My relentless pursuit of knowledge, at any cost.", optionTag: "Rykard, Lord of Blasphemy"),
+                OptionInfo(optionContent: "My inability to resist the allure of power.", optionTag: "Starscourge Radahn")
+            ]
         case .CherishedValue:
-            return ["Loyalty, the cornerstone of every great kingdom.",
-                    "Courage, the heart of every warrior.",
-                    "Wisdom, the foundation of every decision.",
-                    "Harmony, the essence of a balanced life."]
+            return [
+                OptionInfo(optionContent: "Loyalty, the cornerstone of every great kingdom.", optionTag: "Morgott, the Omen King"),
+                OptionInfo(optionContent: "Courage, the heart of every warrior.", optionTag: "Starscourge Radahn"),
+                OptionInfo(optionContent: "Wisdom, the foundation of every decision.", optionTag: "Godrick the Grafted"),
+                OptionInfo(optionContent: "Harmony, the essence of a balanced life.", optionTag: "Rennala Queen of the Full Moon")
+            ]
         }
+        
     }
     
-    
-    
-    var tags: [String] {
-        switch self {
-        case .HomeLandscape:
-            return ["godrickTheGrafted",
-                    "rennalaQueenOfTheFullMoon",
-                    "starscourgeRadahn",
-                    "morgottTheOmenKing"]
-        case .CombatMethod:
-            return ["rykardLordOfBlasphemy",
-                    "starscourgeRadahn",
-                    "maleniaBladeOfMiquella",
-                    "morgottTheOmenKing"]
-        case .LeadershipStyle:
-            return ["godrickTheGrafted",
-                    "rennalaQueenOfTheFullMoon",
-                    "mohgLordOfBlood",
-                    "rykardLordOfBlasphemy"]
-        case .ChallengeApproach:
-            return ["Godrick the Grafted",
-                    "mohgLordOfBlood",
-                    "maleniaBladeOfMiquella",
-                    "starscourgeRadahn"]
-        case .GreatestStrength:
-            return ["godrickTheGrafted",
-                    "rennalaQueenOfTheFullMoon",
-                    "maleniaBladeOfMiquella",
-                    "rykardLordOfBlasphemy"]
-        case .RulerType:
-            return ["morgottTheOmenKing",
-                    "rennalaQueenOfTheFullMoon",
-                    "mohgLordOfBlood",
-                    "godrickTheGrafted"]
-        case .GreatestWeakness:
-            return ["morgottTheOmenKing",
-                    "mohgLordOfBlood",
-                    "rykardLordOfBlasphemy",
-                    "starscourgeRadahn"]
-        case .CherishedValue:
-            return ["morgottTheOmenKing",
-                    "starscourgeRadahn",
-                    "godrickTheGrafted",
-                    "rennalaQueenOfTheFullMoon"]
-        }
-    }
     
 
     

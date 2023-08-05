@@ -8,21 +8,11 @@
 import Foundation
 import UIKit
 
-
+// ScoreTracker struct tracks the score for each demigod in Elden Ring.
 struct ScoreTracker{
     
-    enum buttontags: String, CaseIterable, Hashable{
-        case godrickTheGrafted
-        case rennalaQueenOfTheFullMoon
-        case starscourgeRadahn
-        case morgottTheOmenKing
-        case rykardLordOfBlasphemy
-        case maleniaBladeOfMiquella
-        case mohgLordOfBlood
-    }
     
-
-    //Initialize score of each demi god with dictionary
+    // score dictionary uses the Nickname enumeration from DemigodInfo as the key and an integer as the value.
     var score:[DemigodInfo.Nickname:Int] = [
         .godrickTheGrafted: 0,
         .rennalaQueenOfTheFullMoon:0,
@@ -33,52 +23,46 @@ struct ScoreTracker{
         .mohgLordOfBlood:0
     ]
     
+    
+    
+    //Hold the final result message after all scores are calculated.
     var resultText = ""
+    
+    
+    
+    //Hold the Nickname of the demigod who has the highest score.
     var resultDemigod:DemigodInfo.Nickname = .godrickTheGrafted
     
     
 
-    //The funciton that calculate the highest score
+    // It assigns the nickname of the demigod with the highest score to resultDemigod.
     mutating func getHighestScore(){
         if let (demigod, _) = score.max(by: {$0.value < $1.value}){
-            //resultText = "You possess the great rune of \(demigod.rawValue)"
             resultDemigod = demigod
         }else{
-            //resultText = "You possess the great rune of \(Demigod.Nickname.mohgLordOfBlood.rawValue)"
             resultDemigod = DemigodInfo.Nickname.godrickTheGrafted
         }
     }
+    
+    
+
 
     
-    //Tracking score each time we press the next button
-    mutating func trackingScore(_ tags:String){
-        let selectedTags = buttontags(rawValue: tags)
+    
+    
+    // Increases the score of the demigod associated with the selected tag by 1 each time it's called.
+    mutating func trackingScore(_ tags: String){
+        guard let selectedTag = DemigodInfo.Nickname(rawValue: tags) else { return }
         
-        switch selectedTags{
-        case .godrickTheGrafted: score[.godrickTheGrafted]! += 1
-        case .rennalaQueenOfTheFullMoon: score[.rennalaQueenOfTheFullMoon]! += 1
-        case .starscourgeRadahn: score[.starscourgeRadahn]! += 1
-        case .morgottTheOmenKing: score[.morgottTheOmenKing]! += 1
-        case .rykardLordOfBlasphemy: score[.rykardLordOfBlasphemy]! += 1
-        case .maleniaBladeOfMiquella: score[.maleniaBladeOfMiquella]! += 1
-        case .mohgLordOfBlood: score[.mohgLordOfBlood]! += 1
-        default: score[.godrickTheGrafted]! += 0
+        //Increment the corresponding score
+        score[selectedTag] = (score[selectedTag] ?? 0) + 1
+        
+        //Print out the result for debugging purposes
+        for demigod in DemigodInfo.Nickname.allCases {
+            print("\(demigod.rawValue) \(score[demigod] ?? 0)")
         }
-        
-        print("""
-        godrickTheGrafted \(score[.godrickTheGrafted] ?? 0)
-        rennalaQueenOfTheFullMoon \(score[.rennalaQueenOfTheFullMoon] ?? 0)
-        starscourgeRadahn \(score[.starscourgeRadahn] ?? 0)
-        morgottTheOmenKing \(score[.morgottTheOmenKing] ?? 0)
-        rykardLordOfBlasphemy \(score[.rykardLordOfBlasphemy] ?? 0)
-        maleniaBladeOfMiquella \(score[.maleniaBladeOfMiquella] ?? 0)
-        mohgLordOfBlood \(score[.mohgLordOfBlood] ?? 0)
-        
-    """)
-
     }
 }
-
 
 
 

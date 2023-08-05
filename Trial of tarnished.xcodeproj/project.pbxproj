@@ -17,7 +17,6 @@
 		745D8D4B2A7B3FB9008C9527 /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D8D4A2A7B3FB9008C9527 /* FinalViewController.swift */; };
 		745D8D522A7B4021008C9527 /* DemigodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D8D512A7B4021008C9527 /* DemigodModel.swift */; };
 		745D8D542A7B5CAC008C9527 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D8D532A7B5CAC008C9527 /* QuestionModel.swift */; };
-		74745ED12A7CB205005B0A79 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74745ED02A7CB205005B0A79 /* WebViewController.swift */; };
 		74745ED32A7CC4E0005B0A79 /* bgm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74745ED22A7CC4E0005B0A79 /* bgm.mp3 */; };
 		74A17E6D2A7B9D65007F0C28 /* ScoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A17E6C2A7B9D65007F0C28 /* ScoreModel.swift */; };
 /* End PBXBuildFile section */
@@ -35,7 +34,6 @@
 		745D8D4A2A7B3FB9008C9527 /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
 		745D8D512A7B4021008C9527 /* DemigodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemigodModel.swift; sourceTree = "<group>"; };
 		745D8D532A7B5CAC008C9527 /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
-		74745ED02A7CB205005B0A79 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		74745ED22A7CC4E0005B0A79 /* bgm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgm.mp3; sourceTree = "<group>"; };
 		74A17E6C2A7B9D65007F0C28 /* ScoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -54,7 +52,6 @@
 		745D8D262A7B3EE6008C9527 = {
 			isa = PBXGroup;
 			children = (
-				74745ED02A7CB205005B0A79 /* WebViewController.swift */,
 				745D8D312A7B3EE6008C9527 /* Trial of tarnished */,
 				745D8D302A7B3EE6008C9527 /* Products */,
 			);
@@ -185,7 +182,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				74A17E6D2A7B9D65007F0C28 /* ScoreModel.swift in Sources */,
-				74745ED12A7CB205005B0A79 /* WebViewController.swift in Sources */,
 				745D8D542A7B5CAC008C9527 /* QuestionModel.swift in Sources */,
 				745D8D4B2A7B3FB9008C9527 /* FinalViewController.swift in Sources */,
 				745D8D472A7B3F85008C9527 /* IntroViewController.swift in Sources */,

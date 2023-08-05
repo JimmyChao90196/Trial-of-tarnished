@@ -13,8 +13,7 @@ class FinalViewController: UIViewController {
     
     var resultDemigod = DemigodInfo.Nickname.godrickTheGrafted
 
- 
-    @IBOutlet var webButton: UIButton!
+
     @IBOutlet var resultBackgroundImage: UIImageView!
     @IBOutlet var resultDescription: UITextView!
     @IBOutlet var resultRuneImage: UIImageView!
@@ -32,6 +31,7 @@ class FinalViewController: UIViewController {
     }
     
     
+    //Update result according to the highest score
     func updateResult(){
         let resultDemigodInfo = DemigodInfo(resultDemigod)
         resultTitle.text = resultDemigodInfo.titles
@@ -39,8 +39,6 @@ class FinalViewController: UIViewController {
         resultRuneImage.image = UIImage(named: resultDemigodInfo.runePictures)
         resultRuneImage.backgroundColor = .black
         resultBackgroundImage.image = UIImage(named: resultDemigodInfo.bossImage)
-        
-        
     }
     
     
